@@ -28,3 +28,4 @@ src/ade25.fabfiles
 fabfile.py
 serverdetails.json
 .DS_Store
+pip-selfcheck.json
