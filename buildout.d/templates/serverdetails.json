@@ -1,0 +1,15 @@
+{
+  "server": "zope8",
+  "servername": "${hosts:public}",
+  "nginx": "1.9.3",
+  "varnish": "4.0.3",
+  "haproxy": "1.5.14",
+  "sites": [
+    {
+      "title": "${sites:zopeX}",
+      "type": "plone",
+      "port": "${ports:zopeX}",
+      "url": "${hosts:zopeX}"
+    }
+  ]
+}
