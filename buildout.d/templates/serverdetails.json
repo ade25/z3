@@ -6,10 +6,10 @@
   "haproxy": "1.5.14",
   "sites": [
     {
-      "title": "${sites:zopeX}",
+      "title": "${sites:zope1}",
       "type": "plone",
-      "port": "${ports:zopeX}",
-      "url": "${hosts:zopeX}"
+      "port": "${ports:zope1}",
+      "url": "${hosts:zope1}"
     }
   ]
 }
