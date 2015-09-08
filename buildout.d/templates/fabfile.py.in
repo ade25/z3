@@ -79,7 +79,7 @@ def deploy(actor=None):
     with cd(env.webserver):
         run('bin/supervisorctl reread')
         run('bin/supervisorctl update')
-    msg = '[s1] s1.ade25.de server configuration deployed by %(actor)s' % opts
+    msg = '[z3] z3.ade25.de server configuration deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
     slack.chat.post_message('#general', msg, username=user, icon_emoji=icon)
