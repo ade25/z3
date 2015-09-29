@@ -10,6 +10,12 @@
       "type": "plone",
       "port": "${ports:zope1}",
       "url": "${hosts:zope1}"
+    },
+    {
+      "title": "${sites:zope9}",
+      "type": "plone",
+      "port": "${ports:zope9}",
+      "url": "${hosts:zope9}"
     }
   ]
 }
