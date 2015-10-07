@@ -18,12 +18,7 @@ server {
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Content-Type-Options "nosniff"
     # Header set Content-Security-Policy-Report-Only "default-src 'self'; img-src *; style-src 'unsafe-inline'; script-src 'unsafe-inline' 'unsafe-eval'"
-    Header set Content-Security-Policy "default-src 'self' ${hosts:zope9}; \
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' ${hosts:zope9}; \
-        style-src 'self' 'unsafe-inline' ${hosts:zope9}; \
-        img-src 'self' 'unsafe-inline' ${hosts:zope9}; \
-        font-src 'self' 'unsafe-inline' ${hosts:zope9}; \
-        object-src 'self' ${hosts:zope9};
+    Header set Content-Security-Policy "default-src 'self' ${hosts:zope9}; script-src 'self' 'unsafe-inline' 'unsafe-eval' ${hosts:zope9}; style-src 'self' 'unsafe-inline' ${hosts:zope9}; img-src 'self' 'unsafe-inline' ${hosts:zope9};font-src 'self' 'unsafe-inline' ${hosts:zope9}; object-src 'self' ${hosts:zope9};"
 
 
     location ${urls:fallback} {
@@ -39,7 +34,7 @@ server {
         expires max;
         access_log off;
         add_header Pragma public;
-        add_header Cache-Control "public";
+        add_header Cache-Control public;
         proxy_buffering         on;
         proxy_cache_valid 200 120m;
     }
@@ -48,7 +43,7 @@ server {
         expires max;
         access_log off;
         add_header Pragma public;
-        add_header Cache-Control "public";
+        add_header Cache-Control public;
         proxy_buffering         on;
         proxy_cache_valid 200 120m;
     }
