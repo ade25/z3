@@ -13,8 +13,25 @@ server {
     root ${zope-locations:zope9}/src/${sites:zope9}.sitetheme/${sites:zope9}/sitetheme/resources/dist;
     index index.html index.htm;
 
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Strict-Transport-Security "max-age=15768000; includeSubDomains"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    # Header set Content-Security-Policy-Report-Only "default-src 'self'; img-src *; style-src 'unsafe-inline'; script-src 'unsafe-inline' 'unsafe-eval'"
+    Header set Content-Security-Policy "default-src 'self' ${hosts:zope9}; \
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' ${hosts:zope9}; \
+        style-src 'self' 'unsafe-inline' ${hosts:zope9}; \
+        img-src 'self' 'unsafe-inline' ${hosts:zope9}; \
+        font-src 'self' 'unsafe-inline' ${hosts:zope9}; \
+        object-src 'self' ${hosts:zope9};
+
+
     location ${urls:fallback} {
         break;
+    }
+
+    location  ~ /manage(_.+)?$ {
+      deny all;
     }
 
     location /styles/ {

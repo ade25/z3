@@ -16,6 +16,10 @@ server {
         break;
     }
 
+    location  ~ /manage(_.+)?$ {
+      deny all;
+    }
+
     location /styles/ {
         root ${zope-locations:zope1}/src/${sites:zope1}.sitetheme/${sites:zope1}/sitetheme/resources/dist;
         expires max;
