@@ -10,6 +10,7 @@ server {
     listen *:${ports:http};
     server_name ${hosts:zope1};
     access_log ${buildout:directory}/var/log/${hosts:zope1}.log;
+    root ${zope-locations:zope1}/src/${sites:zope1}.sitetheme/${sites:zope1}/sitetheme/resources/dist;
     index index.html index.htm;
 
     location ${urls:fallback} {
