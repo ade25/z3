@@ -18,10 +18,10 @@
       "url": "${hosts:zope9}"
     },
     {
-      "title": "${sites:zope10}",
+      "title": "${sites:zope9-1}",
       "type": "plone",
-      "port": "${ports:zope10}",
-      "url": "${hosts:zope10}"
+      "port": "${ports:zope9-1}",
+      "url": "${hosts:zope9-1}"
     }
   ]
 }
