@@ -7,6 +7,12 @@ server {
 }
 
 server {
+    listen *:${ports:http};
+    server_name www.${hosts:zope9-1} ${hosts:zope9-1};
+    return 301 $scheme://${hosts:zope9}$request_uri;
+}
+
+server {
     listen *:${ports:http} deferred;
     server_name ${hosts:zope9};
     access_log ${buildout:directory}/var/log/${hosts:zope9}.log;
