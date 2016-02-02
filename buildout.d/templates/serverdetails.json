@@ -52,6 +52,12 @@
       "type": "plone",
       "port": "${ports:zope9-12}",
       "url": "${hosts:zope9-12}"
+    },
+    {
+      "title": "${sites:zope10}",
+      "type": "plone",
+      "port": "${ports:zope10}",
+      "url": "${hosts:zope10}"
     }
   ]
 }
