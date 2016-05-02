@@ -14,7 +14,12 @@ server {
     index index.html index.htm;
 
     location ${urls:fallback} {
+        root ${buildout:directory}/htdocs/;
         break;
+    }
+
+    location ~ /.well-known {
+        root ${buildout:directory}/htdocs/;
     }
 
     location  ~ /manage(_.+)?$ {
