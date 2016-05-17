@@ -10,7 +10,7 @@ simple steps:
 Requirements
 ------------
 
-All interaction is based on the push deployment tool Fabric. In order to 
+All interaction is based on the push deployment tool Fabric. In order to
 bootstrap you local directory you need to setup a virtual environment and
 install a few dependencies
 
