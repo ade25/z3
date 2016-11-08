@@ -108,7 +108,7 @@ def update(sitename=None, actor=None):
 
 
 @task
-def generate_cert(hostname=None):
+def generate_cert(hostname=None, actor=None):
     """ Generate SSL cert via LE certbot """
     opts = dict(
         hostname=hostname,
