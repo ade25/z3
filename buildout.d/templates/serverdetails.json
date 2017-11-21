@@ -64,6 +64,42 @@
       "type": "plone",
       "port": "${ports:zope10}",
       "url": "${hosts:zope10}"
+    },
+    {
+      "title": "${sites:zope11}",
+      "type": "plone",
+      "port": "${ports:zope11}",
+      "url": "${hosts:zope11}"
+    },
+    {
+      "title": "${sites:zope12}",
+      "type": "plone",
+      "port": "${ports:zope12}",
+      "url": "${hosts:zope12}"
+    },
+    {
+      "title": "${sites:zope13}",
+      "type": "plone",
+      "port": "${ports:zope13}",
+      "url": "${hosts:zope13}"
+    },
+    {
+      "title": "${sites:zope14}",
+      "type": "plone",
+      "port": "${ports:zope14}",
+      "url": "${hosts:zope14}"
+    },
+    {
+      "title": "${sites:zope15}",
+      "type": "plone",
+      "port": "${ports:zope15}",
+      "url": "${hosts:zope15}"
+    },
+    {
+      "title": "${sites:zope16}",
+      "type": "plone",
+      "port": "${ports:zope16}",
+      "url": "${hosts:zope16}"
     }
   ]
 }
