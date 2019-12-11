@@ -24,18 +24,6 @@
       "url": "${hosts:zope7}"
     },
     {
-      "title": "${sites:zope9}",
-      "type": "plone",
-      "port": "${ports:zope9}",
-      "url": "${hosts:zope9}"
-    },
-    {
-      "title": "${sites:zope9-12}",
-      "type": "plone",
-      "port": "${ports:zope9-12}",
-      "url": "${hosts:zope9-12}"
-    },
-    {
       "title": "${sites:zope11}",
       "type": "plone",
       "port": "${ports:zope11}",
